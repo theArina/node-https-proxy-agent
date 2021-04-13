@@ -112,9 +112,9 @@ export default class HttpsProxyAgent extends Agent {
 		// The `Host` header should only include the port
 		// number when it is not the default port.
 		let { host, port, secureEndpoint } = opts;
-		if (!isDefaultPort(port, secureEndpoint)) {
+// 		if (!isDefaultPort(port, secureEndpoint)) {
 			host += `:${port}`;
-		}
+// 		}
 		headers.Host = host;
 
 		headers.Connection = 'close';
